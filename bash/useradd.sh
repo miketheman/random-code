@@ -7,7 +7,7 @@
 # Set the params here
 USER="michael"
 FULLNAME="'Mike Fiedler'"
-ID="505"
+ID="1005"
 PASSWORD='<somepassword>' # password is obtained from an existing system via:  getent shadow $USER | cut -f2 -d":"
 
 # Add a bunch of servers to a server list variable
@@ -33,7 +33,7 @@ function test_for_user {
 }
 
 function add_user {
-    ssh $1 useradd -g $USER -G $USER,wheel -c $FULLNAME -u $ID -p \'$PASSWORD\' $USER
+    ssh $1 useradd -g staff -G staff,wheel -c $FULLNAME -u $ID -p \'$PASSWORD\' $USER
     echo "Added user $USER to $1"
 }
 
