@@ -33,7 +33,7 @@ function test_for_user {
 }
 
 function add_user {
-    ssh $1 useradd -g staff -G staff,wheel -c $FULLNAME -u $ID -p \'$PASSWORD\' $USER
+    ssh $1 useradd -g users -G users,wheel -c $FULLNAME -u $ID -p \'$PASSWORD\' $USER
     echo "Added user $USER to $1"
 }
 
